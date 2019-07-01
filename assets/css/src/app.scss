@@ -1,0 +1,72 @@
+/* 
+    Created on : Jul 1, 2019, 8:32:22 AM
+    Author     : slash
+*/
+@import '_colors';
+
+html {
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	
+	body {
+		padding: 0px;
+		margin: 0px;
+		font-family: 'Roboto', sans-serif;
+		font-size: 14px;
+		font-weight: 300;
+		height: 100%;
+		
+		h1 {
+			margin: 0px;
+			padding: 0px;
+			font-weight: 300;
+			color: $white;
+		}
+		
+		.app {
+			height: 100%;
+			
+			.portfolio {
+				height: 100%;
+				
+				.item {
+					height: 100%;
+					font-size: 0px;
+					
+					.info {
+						display: inline-block;
+						vertical-align: top;
+						width: calc(40% - 160px);
+						padding: 0px 80px;
+						text-align: center;
+						
+						h1 {
+							font-size: 32px;
+						}
+						p {
+							font-size: 18px;
+							margin: 40px 0px 0px 0px;
+							color: $silver;
+						}
+					}
+					.assets {
+						display: inline-block;
+						vertical-align: top;
+						width: 60%;
+						height: 100%;
+						text-align: center;
+						position: relative;
+						
+						img {
+							border: 1px solid $white;
+							position: absolute;
+							top: 50%;
+							left: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}
