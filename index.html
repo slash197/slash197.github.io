@@ -5,26 +5,72 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="fullpage.css" />
 		<link rel="stylesheet" type="text/css" href="assets/css/app.css" />
-		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" /> 
+		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" />
 	</head>
 	<body>
+		<div class="header">
+			<a href=""><img src="assets/image/logo.light.png" alt="Slash Web Design logo" /></a>
+		</div>
+		
+		<ul class="menu">
+			<li data-menuanchor="SportsTracker" class="active"><a href="#SportsTracker">Sports Tracker</a></li>
+			<li data-menuanchor="EasyPlanner"><a href="#EasyPlanner">Easy Planner</a></li>
+			<li data-menuanchor="Vidalyze"><a href="#Vidalyze">Vidalyze</a></li>
+		</ul>
+		
 		<div class="app">
-			<div class="portfolio">
+			<div class="section" data-anchor="SportsTracker">
 				<div class="item purple">
+					<div class="overlay hexa"></div>
 					<div class="info">
+						<div class="counter"><span>1</span>|5</div>
+						<p class="category">Full stack development</p>
 						<h1>Sports Carnival Record Keeping Software</h1>
 						<p>Designed Exclusively for Schools & Teachers. As a Teacher you're already busy enough! That's why Sports Tracker has been designed from the ground up to help you speed up and automate the management of your sports meets. </p>
+						<p><a class="btn btn-info" href="">View project</a></p>
 					</div>
 					<div class="assets">
-						<img class="hasTransition" src="assets/image/sportstracker.png" alt="SportsTracker" />
+						<img class="hasTransition" src="assets/image/sportstracker.png" alt="Sports Tracker App" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="section" data-anchor="EasyPlanner">
+				<div class="item wiretap">
+					<div class="overlay dots"></div>
+					<div class="info">
+						<div class="counter"><span>1</span>|5</div>
+						<p class="category">Full stack development</p>
+						<h1>The Ultimate Lesson Planning Tool for Teachers</h1>
+						<p>The easiest & most powerful way to plan your lessons and keep record of the important events during your school day. A modern planning tool for the mobile teacher.</p>
+						<p><a class="btn btn-info" href="">View project</a></p>
+					</div>
+					<div class="assets">
+						<img class="hasTransition" src="assets/image/easyplanner.png" alt="Easy Planner App" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="section" data-anchor="Vidalyze">
+				<div class="item quepal">
+					<div class="overlay triangle2"></div>
+					<div class="info">
+						<div class="counter"><span>1</span>|5</div>
+						<p class="category">Full stack development</p>
+						<h1>Sports Carnival Record Keeping Software</h1>
+						<p>Designed Exclusively for Schools & Teachers. As a Teacher you're already busy enough! That's why Sports Tracker has been designed from the ground up to help you speed up and automate the management of your sports meets. </p>
+						<p><a class="btn btn-info" href="">View project</a></p>
+					</div>
+					<div class="assets">
+						<img class="hasTransition" src="assets/image/vidalyze.png" alt="Vidalyze" data-top="40%" data-left="50%" />
+						<img class="hasTransition reverse" src="assets/image/vidalyze2.png" alt="Vidalyze" data-top="10%" data-left="10%" />
 					</div>
 				</div>
 			</div>
 		</div>
 		
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/app.js"></script>
+		<script src="assets/js/loader.js"></script>
 	</body>
 </html>

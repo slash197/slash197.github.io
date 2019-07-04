@@ -1,5 +1,4 @@
 let
-	lg = console.log,
 	pointer = {
 		pos: {
 			x: null,
@@ -9,48 +8,99 @@ let
 			x: 0,
 			y: 0
 		},
-		c: 0.05
-	};
+		c: 0.015
+	},
+	App = function(){
+		this.centerProjectItems = function(){
+			$('.item .info').each(function(){
+				let
+					parentHeight = $(this).parent().height(),
+					height = $(this).height(),
+					padding = (parentHeight - height) / 2;
 
-$(document).ready(function(){
-	$('.portfolio .item .info').each(function(){
-		let
-			parentHeight = $(this).parent().height(),
-			height = $(this).height();
+				if (padding > 0) $(this).css({'padding-top': padding});
+			});
+
+			$('.item .assets img').each(function(){
+				let
+					top = $(this).data('top') ? $(this).data('top') : '50%',
+					left = $(this).data('left') ? $(this).data('left') : '50%',
+					width = $(this).width(),
+					height = $(this).height(),
+					margin = {
+						v: (top === '50%') ? height / 2 * -1 : 0,
+						h: (left === '50%') ? width / 2 * -1 : 0
+					};
+
+				$(this).css({
+					'top': top,
+					'left': left,
+					'margin-left': margin.h,
+					'margin-top': margin.v
+				});
+			});
+		};
+		
+		this.resizeWindow = function(){
+			this.centerProjectItems();
+		};
+		
+		this.init = function(){
+			$('.app').fullpage({
+				menu: '.menu',
+				autoScrolling: true,
+				scrollHorizontally: false,
+				afterRender: function(){
+					this.resizeWindow();
+				}.bind(this),
+				afterResize: function(){
+					this.resizeWindow();
+				}.bind(this)
+			});
+				
+			$(document).on('mousemove', 'body', function(e){		
+				$('.hasTransition:inViewport').parallax(30, e);
+			});
+
+			$(window).resize(this.resizeWindow.bind(this));
+
+			$.fn.parallax = function(resistance, mouse){
+				let
+					i = 0,
+					nodes = $(this),
+					factor = null;
 			
-		$(this).css({
-			'padding-top': (parentHeight - height) / 2
-		});
-	});
-	
-	$('.portfolio .item .assets img').each(function(){
-		let
-			width = $(this).width(),
-			height = $(this).height();
-			
-		$(this).css({
-			'margin': '-' + (height / 2) + 'px 0px 0px -' + (width / 2) + 'px'
-		});
-	});
-});
+				for (i = 0; i < nodes.length; i++)
+				{
+					factor = $(nodes[i]).hasClass('reverse') ? 1 : -1;
 
-$(document).on('mousemove', '.hasTransition', function(e){
-	if (!pointer.diff.x) pointer.diff.x = e.pageX;
-	if (!pointer.diff.y) pointer.diff.y = e.pageY;
+					TweenLite.to(nodes[i], 0.2, {
+						x: ((mouse.clientX - window.innerWidth / 2) / resistance) * factor,
+						y: ((mouse.clientY - window.innerHeight / 2) / resistance) * factor
+					});
+				}
+			};				
+		};
+		
+		this.init();
+	},
+	SWD = new App();
 	
-	pointer.diff.x = e.pageX - pointer.pos.x;
-	pointer.diff.y = e.pageY - pointer.pos.y;
-	pointer.pos.x = e.pageX;
-	pointer.pos.y = e.pageY;
+$.extend($.expr[':'],{
+    inViewport: function(a){
+		let 
+			bounds = $(a).offset(),
+			viewport = {
+				top : $('body').scrollTop(),
+				left : $('body').scrollLeft()
+			};
+		
+		viewport.right = viewport.left + window.innerWidth;
+		viewport.bottom = viewport.top + window.innerHeight;
 
-	let 
-		pos = $(this).position(),
-		top = pos.top + pointer.diff.y * pointer.c,
-		left = pos.left + pointer.diff.x * pointer.c;
-	
-	lg(pointer.diff);
-	$(this).css({
-		top: top + 'px',
-		left: left + 'px'
-	});
+		bounds.right = bounds.left + $(a).outerWidth();
+		bounds.bottom = bounds.top + $(a).outerHeight();
+
+		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+	}
 });

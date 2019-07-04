@@ -7,8 +7,6 @@ $white: #ffffff;
 $silver: #e0e0e0;
 $black: #000000;
 
-.purple {
-	background: #673AB7;
-	background: -webkit-linear-gradient(to right, #512DA8, #673AB7);
-	background: linear-gradient(to right, #512DA8, #673AB7);
-}
+.purple { background: linear-gradient(to right, #512DA8, #673AB7); }
+.wiretap { background: linear-gradient(to right, #F27121, #E94057, #8A2387); }
+.quepal { background: linear-gradient(to right, #11998e, #38ef7d); }
