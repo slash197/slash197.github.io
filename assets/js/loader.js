@@ -23,12 +23,13 @@ function lg(o, level){
 	}
 };
 
-function loadScript(source, callback, cached){
+function loadScript(source, callback, cached, module){
 	let script = document.createElement('script');
 
 	script.src = !debug || cached ? source : source + '?v=' + ts;
 	script.async = false;
 	script.defer = false;
+	script.type = module ? 'module' : '';
 	script.onerror = function(){
 		lg('loading > error loading file [' + source + ']', 'error');
 	};
@@ -62,7 +63,7 @@ loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', 
 loadScript('assets/js/jquery.min.js', function(){
 	loadScript('assets/js/bootstrap.min.js', function(){
 		loadScript('assets/js/fullpage.js', function(){
-			loadScript('assets/js/app.js');
+			loadScript('assets/js/app.js', null, false, true);
 		}, true);
 	}, true);
 }, true);
