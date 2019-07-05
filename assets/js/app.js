@@ -70,8 +70,8 @@ let
 						width = this.width,
 						height = this.height,
 						margin = {
-							v: (top === '50%') ? height / 2 * -1 : 0,
-							h: (left === '50%') ? width / 2 * -1 : 0
+							v: (top === '50%') ? height / 2 * -1 : (top === '100%') ? height * -1 : 0,
+							h: (left === '50%') ? width / 2 * -1 : (left === '100%') ? width * -1 : 0
 						};
 
 					$(this).css({
@@ -204,6 +204,6 @@ $.fn.parallax = function(resistance, mouse){
 	factor *= -1;
 	
 	TweenLite.to(bg[0], 0.2, {
-		'background-position': ((mouse.clientX - window.innerWidth / 2) / resistance) * factor + 'px 0px'
+		'background-position': ((mouse.clientX - window.innerWidth / 2) / (resistance * 3)) * factor + 'px 0px'
 	});
 };

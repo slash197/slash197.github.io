@@ -28,7 +28,7 @@ html {
 		.menu {
 			position: absolute;
 			margin: 0px;
-			padding: 200px 0px 0px 0px;
+			padding: 0px 0px 0px 0px;
 			z-index: 1;
 			top: 0px;
 			right: 0px;
@@ -41,6 +41,7 @@ html {
 				rgba(0, 0, 0, 0.2) 100%
 			);
 			transition: width .1s ease-in-out;
+			overflow-y: scroll;
 			
 			&:hover {
 				width: 250px;
