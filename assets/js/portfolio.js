@@ -54,12 +54,14 @@ let
 		},
 		c: 0.015
 	},
-	App = function(){
+	App = function(){		
 		this.loadAssets = function(parent){
 			let assets = parent.querySelectorAll('img');
 			
 			for (let i = 0; i < assets.length; i++)
 			{
+				if ((window.innerWidth < 1099) && (i > 0)) break;
+					
 				let img = assets[i];
 				
 				img.src = img.getAttribute('data-url');
@@ -75,8 +77,9 @@ let
 						};
 
 					$(this).css({
-						'top': top,
-						'left': left,
+						'top': window.innerWidth > 1099 ? top : '50%',
+						'left': window.innerWidth > 1099 ? left : 'auto',
+						'right': window.innerWidth > 1099 ? 'auto' : 10,
 						'margin-left': margin.h,
 						'margin-top': margin.v,
 						'opacity': 1
@@ -150,7 +153,7 @@ let
 				
 				bgIndex++;
 				
-				$('.menu ul').append('<li data-menuanchor="' + p.name.safe() + '"><a href="#' + p.name.safe() + '">' + p.name + '</a></li>');
+				$('.menu ul').append('<li data-menuanchor="' + p.name.safe() + '"><a href="#' + p.name.safe() + '">/' + p.name + '</a></li>');
 				
 				if (bgIndex === Data.Background.length) bgIndex = 0;
 			}
@@ -176,9 +179,9 @@ let
 		this.init();
 	},
 	SWD = new App();
-				
-$(document).on('mousemove', 'body', function(e){		
-	$('.hasTransition:inViewport').parallax(30, e);
+			
+$(document).on('mousemove', 'body', function(e){
+	if (window.innerWidth > 1099) $('.hasTransition:inViewport').parallax(30, e);
 });
 
 $(window).resize(SWD.resizeWindow.bind(SWD));

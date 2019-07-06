@@ -4,6 +4,7 @@
 
 let 
 	ts = new Date().getTime(),
+	url = new URL(window.location.href),
 	debug = true;
 
 function lg(o, level){
@@ -60,10 +61,19 @@ window.onerror = function(msg, source, line, col, error){
 };
 
 loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', null, true);
+loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js', null, true);
+
 loadScript('assets/js/jquery.min.js', function(){
 	loadScript('assets/js/bootstrap.min.js', function(){
 		loadScript('assets/js/fullpage.js', function(){
-			loadScript('assets/js/app.js', null, false, true);
+			if (url.pathname.indexOf('portfolio') > -1)
+			{
+				loadScript('assets/js/portfolio.js', null, false, true);
+			}
+			else
+			{
+				loadScript('assets/js/home.js', null, false, true);
+			}
 		}, true);
 	}, true);
 }, true);

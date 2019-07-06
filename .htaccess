@@ -1,0 +1,19 @@
+RewriteEngine On
+RewriteRule ^home$ index.html [NC,L,QSA]
+RewriteRule ^portfolio$ /portfolio.html [NC,L,QSA]
+
+<IfModule mod_headers.c>
+    # WEEK
+    <FilesMatch "\.(jpg|jpeg|png)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+
+    # WEEK
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "max-age=31536000"
+    </FilesMatch>
+</IfModule>
+
+<ifmodule mod_deflate.c>
+	AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
