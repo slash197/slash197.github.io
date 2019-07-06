@@ -150,7 +150,7 @@ let
 				
 				bgIndex++;
 				
-				$('.menu').append('<li data-menuanchor="' + p.name.safe() + '"><a href="#' + p.name.safe() + '">' + p.name + '</a></li>');
+				$('.menu ul').append('<li data-menuanchor="' + p.name.safe() + '"><a href="#' + p.name.safe() + '">' + p.name + '</a></li>');
 				
 				if (bgIndex === Data.Background.length) bgIndex = 0;
 			}
