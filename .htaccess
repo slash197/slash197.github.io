@@ -4,7 +4,7 @@ RewriteRule ^portfolio$ /portfolio.html [NC,L,QSA]
 
 <IfModule mod_headers.c>
     # WEEK
-    <FilesMatch "\.(jpg|jpeg|png)$">
+    <FilesMatch "\.(webp|png)$">
         Header set Cache-Control "max-age=31536000, public"
     </FilesMatch>
 

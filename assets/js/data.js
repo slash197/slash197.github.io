@@ -8,7 +8,7 @@ let
 			sub: 'Designed Exclusively for Schools & Teachers. As a Teacher you\'re already busy enough! That\'s why Sports Tracker has been designed from the ground up to help you speed up and automate the management of your sports meets.',
 			url: 'https://sportstrackerapp.com',
 			assets: [
-				{src: 'sportstracker.png', left: 50, top: 50, cls: ''}
+				{src: 'sportstracker.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -19,7 +19,7 @@ let
 			sub: 'The easiest & most powerful way to plan your lessons and keep record of the important events during your school day. A modern planning tool for the mobile teacher',
 			url: 'http://easyplannerapp.com',
 			assets: [
-				{src: 'easyplanner.png', left: 50, top: 50, cls: ''}
+				{src: 'easyplanner.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -30,8 +30,8 @@ let
 			sub: 'Vidalyze is different to other video analysis products in that it works 100% inside of your browser. No software downloads ever mean you\'re always up to date & ready for action',
 			url: 'https://vidalyze.com',
 			assets: [
-				{src: 'vidalyze.png', left: 50, top: 40, cls: ''},
-				{src: 'vidalyze2.png', left: 10, top: 20, cls: 'reverse'}
+				{src: 'vidalyze.webp', left: 50, top: 40, cls: ''},
+				{src: 'vidalyze2.webp', left: 10, top: 20, cls: 'reverse'}
 			]
 		},
 		{
@@ -42,8 +42,8 @@ let
 			sub: 'Luxico know that holidays are about more than great accommodation so our guests have their own Superhost who is a local expert and responsible for helping plan the perfect holiday',
 			url: 'https://luxico.com.au',
 			assets: [
-				{src: 'luxico.png', left: 50, top: 50, cls: ''},
-				{src: 'luxico-mobile.png', left: 10, top: 40, cls: 'reverse'}
+				{src: 'luxico.webp', left: 50, top: 50, cls: ''},
+				{src: 'luxico-mobile.webp', left: 10, top: 40, cls: 'reverse'}
 			]
 		},
 		{
@@ -54,7 +54,7 @@ let
 			sub: 'Do you run a quality business? Then let\'s start winning you more jobs!',
 			url: 'https://www.serviceseeking.com.au',
 			assets: [
-				{src: 'serviceseeking.png', left: 50, top: 50, cls: ''}
+				{src: 'serviceseeking.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -65,7 +65,7 @@ let
 			sub: 'At Hiawatha Log Homes, we think home is a gathering space for family and friends, a place to put your feet up, your sanctuary. Welcome home to the natural beauty and enduring strength of a Hiawatha Log Home',
 			url: 'http://www.hiawatha.com',
 			assets: [
-				{src: 'hiawatha.png', left: 50, top: 50, cls: ''}
+				{src: 'hiawatha.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -76,8 +76,8 @@ let
 			sub: 'Recognised as one of the most respected and client-focused construction companies in the industry, Vaughan Constructions has been influencing the landscape of Australian architecture and building history for more than six decades',
 			url: 'https://www.vaughans.com.au',
 			assets: [
-				{src: 'vaughan2.png', left: 51, top: 51, cls: 'reverse'},
-				{src: 'vaughan.png', left: 20, top: 50, cls: ''}
+				{src: 'vaughan2.webp', left: 51, top: 51, cls: 'reverse'},
+				{src: 'vaughan.webp', left: 20, top: 50, cls: ''}
 			]
 		},
 		{
@@ -88,7 +88,7 @@ let
 			sub: 'Planning Pod saves event professionals ~62 hours every month by keeping them better organized and centralizing their event details and communications',
 			url: 'https://www.planningpod.com',
 			assets: [
-				{src: 'planningpod.png', left: 50, top: 50, cls: ''}
+				{src: 'planningpod.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -99,8 +99,8 @@ let
 			sub: 'Proudly Serving Community Pharmacy, Chain Pharmacy, and Long Term Care',
 			url: 'https://www.smithdrug.com',
 			assets: [
-				{src: 'smithdrug1.png', left: 40, top: 35, cls: ''},
-				{src: 'smithdrug2.png', left: 21, top: 31, cls: 'reverse'}
+				{src: 'smithdrug1.webp', left: 40, top: 35, cls: ''},
+				{src: 'smithdrug2.webp', left: 21, top: 31, cls: 'reverse'}
 			]
 		},
 		{
@@ -111,12 +111,12 @@ let
 			sub: 'MyBuilder makes it easy to find quality local tradesmen, reviewed by other homeowners, all across the UK',
 			url: 'https://www.mybuilder.com',
 			assets: [
-				{src: 'mybuilder.png', left: 50, top: 75, cls: 'reverse'},
-				{src: 'mybuilder1.png', left: 30, top: 45, cls: ''},
-				{src: 'mybuilder2.png', left: 20, top: 30, cls: 'reverse'},
-				{src: 'mybuilder3.png', left: 35, top: 15, cls: ''},
-				{src: 'mybuilder4.png', left: 50, top: 50, cls: 'reverse'},
-				{src: 'mybuilder5.png', left: 70, top: 60, cls: ''}
+				{src: 'mybuilder.webp', left: 50, top: 75, cls: 'reverse'},
+				{src: 'mybuilder1.webp', left: 30, top: 45, cls: ''},
+				{src: 'mybuilder2.webp', left: 20, top: 30, cls: 'reverse'},
+				{src: 'mybuilder3.webp', left: 35, top: 15, cls: ''},
+				{src: 'mybuilder4.webp', left: 50, top: 50, cls: 'reverse'},
+				{src: 'mybuilder5.webp', left: 70, top: 60, cls: ''}
 			]
 		},
 		{
@@ -127,8 +127,8 @@ let
 			sub: 'PayLoadz offers a complete Digital Goods eCommerce service for anyone to sell downloadable goods online in just a few minutes',
 			url: 'https://www.payloadz.com',
 			assets: [
-				{src: 'payloadz2.png', left: 50, top: 50, cls: ''},
-				{src: 'payloadz.png', left: 100, top: 100, cls: 'reverse'}
+				{src: 'payloadz2.webp', left: 50, top: 50, cls: ''},
+				{src: 'payloadz.webp', left: 100, top: 100, cls: 'reverse'}
 			]
 		},
 		{
@@ -139,8 +139,8 @@ let
 			sub: 'You fund and we deliver Kirawawa, a survival kit for low income mothers of newborns in Peru',
 			url: 'https://kirawawa.org',
 			assets: [
-				{src: 'kirawawa.png', left: 31, top: 40, cls: ''},
-				{src: 'kirawawa2.png', left: 20, top: 30, cls: 'reverse'}
+				{src: 'kirawawa.webp', left: 31, top: 40, cls: ''},
+				{src: 'kirawawa2.webp', left: 20, top: 30, cls: 'reverse'}
 			]
 		},
 		{
@@ -151,7 +151,7 @@ let
 			sub: 'Book a trusted cleaner or handyman in minutes',
 			url: 'https://www.askfortask.com',
 			assets: [
-				{src: 'askfortask.png', left: 50, top: 50, cls: ''}
+				{src: 'askfortask.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -162,9 +162,9 @@ let
 			sub: 'Tired of flying solo to your friends&#8217; weddings? Welcome to the dating app that helps you communicate better, choose your best photos and matches you with people who share your values',
 			url: 'http://icebr.kr',
 			assets: [
-				{src: 'icebrkr1.png', left: 10, top: 50, cls: ''},
-				{src: 'icebrkr2.png', left: 40, top: 30, cls: 'reverse'},
-				{src: 'icebrkr3.png', left: 70, top: 50, cls: ''}
+				{src: 'icebrkr1.webp', left: 10, top: 50, cls: ''},
+				{src: 'icebrkr2.webp', left: 40, top: 30, cls: 'reverse'},
+				{src: 'icebrkr3.webp', left: 70, top: 50, cls: ''}
 			]
 		},
 		{
@@ -175,7 +175,7 @@ let
 			sub: 'With tens of millions of users, letgo’s the largest and fastest growing app to buy and sell locally. Already among the top mobile apps in America, letgo’s users buy and sell everything from electronics, cars and collectibles to clothing, furniture and other home décor',
 			url: 'https://letgo.com',
 			assets: [
-				{src: 'letgo.png', left: 50, top: 50, cls: ''}
+				{src: 'letgo.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -186,7 +186,7 @@ let
 			sub: 'It\'s simple. Swipe right if you like her, left to pass or send pre match message. Now let destiny take care of the rest. Don\’t worry, it will be just a matter of time before you match with someone.',
 			url: 'https://www.zoeapp.co',
 			assets: [
-				{src: 'zoeapp.png', left: 50, top: 50, cls: ''}
+				{src: 'zoeapp.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -197,7 +197,7 @@ let
 			sub: 'Need to do grocery shopping? Our trained shoppers will shop for you in the grocery store and deliver to your home at the exact same price as the stores. Want to eat at your favorite restaurant, but they don\'t deliver? We will pick up your food and deliver it in minutes. This is a new way of life. The very best of your city, delivered in minutes.',
 			url: 'https://www.rappi.com',
 			assets: [
-				{src: 'rappi.png', left: 50, top: 50, cls: ''}
+				{src: 'rappi.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -219,9 +219,9 @@ let
 			sub: 'Grab a car2go from anywhere on the street, then drop it off anywhere on the street in the operating area. No reservations required. No long lines. No refueling. No worries.',
 			url: 'https://www.car2go.com',
 			assets: [
-				{src: 'car2go1.png', left: 20, top: 50, cls: ''},
-				{src: 'car2go3.png', left: 30, top: 50, cls: 'reverse'},
-				{src: 'car2go2.png', left: 51, top: 50, cls: ''}
+				{src: 'car2go1.webp', left: 20, top: 50, cls: ''},
+				{src: 'car2go3.webp', left: 30, top: 50, cls: 'reverse'},
+				{src: 'car2go2.webp', left: 51, top: 50, cls: ''}
 			]
 		},
 		{
@@ -232,9 +232,9 @@ let
 			sub: 'Sending money has never been easier',
 			url: 'https://azimo.com',
 			assets: [
-				{src: 'azimo1.png', left: 51, top: 40, cls: ''},
-				{src: 'azimo2.png', left: 30, top: 50, cls: 'reverse'},
-				{src: 'azimo3.png', left: 50, top: 20, cls: ''}
+				{src: 'azimo1.webp', left: 51, top: 40, cls: ''},
+				{src: 'azimo2.webp', left: 30, top: 50, cls: 'reverse'},
+				{src: 'azimo3.webp', left: 50, top: 20, cls: ''}
 			]
 		},
 		{
@@ -245,7 +245,7 @@ let
 			sub: 'Joel Klassen is a Calgary based Photographer, proudly offering his passion and talent for quality photography across Western Canada',
 			url: 'https://klassenphotos.com',
 			assets: [
-				{src: 'klassen.png', left: 50, top: 50, cls: ''}
+				{src: 'klassen.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -256,7 +256,7 @@ let
 			sub: 'Professionally trained in Architectural and Environmental Design, Josh Pabst has a substantial portfolio  of diverse project types throughout the U.S., China, Korea and South America. These include office complexes and high-rise commercial towers, residential and hotel developments, and master planning for new sustainable cities. He has participated on multiple international design competitions and has also been a key team member for projects that are built or under construction',
 			url: 'https://www.joshpabstphoto.com',
 			assets: [
-				{src: 'joshpabstphoto.png', left: 50, top: 50, cls: ''}
+				{src: 'joshpabstphoto.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -267,7 +267,7 @@ let
 			sub: 'I\'m a photographer based in Los Angeles, California who specializes in photographing architecture; I also have a mild airplane obsession',
 			url: 'https://www.mpkelley.com',
 			assets: [
-				{src: 'mpkelley.png', left: 50, top: 50, cls: ''}
+				{src: 'mpkelley.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -278,7 +278,7 @@ let
 			sub: 'Milton & King started in 2008 and we’ve been on this amazing journey ever since. The shared passion of brothers Richard and Bryce, Milton & King is a humble family business blindly dedicated to the evolution of the wallpaper and fabric industry',
 			url: 'https://www.miltonandking.com',
 			assets: [
-				{src: 'miltonandking.png', left: 50, top: 50, cls: ''}
+				{src: 'miltonandking.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -289,8 +289,8 @@ let
 			sub: 'Quanta Magazine is an editorially independent online publication launched by the Simons Foundation to enhance public understanding of science. Why Quanta? Albert Einstein called photons “quanta of light.” Our goal is to “illuminate science.”',
 			url: 'https://www.quantamagazine.org',
 			assets: [
-				{src: 'quantamagazine1.png', left: 20, top: 30, cls: 'reverse'},
-				{src: 'quantamagazine2.png', left: 10, top: 30, cls: ''}
+				{src: 'quantamagazine1.webp', left: 20, top: 30, cls: 'reverse'},
+				{src: 'quantamagazine2.webp', left: 10, top: 30, cls: ''}
 			]
 		},
 		{
@@ -301,8 +301,8 @@ let
 			sub: 'We\'re committed to improving the quality of tuition sessions at every level. That\'s why we’re working with Pearson, one of the world\'s largest education publishers, to develop the Tutors’ Guild series of tutor packs',
 			url: 'https://tutorful.co.uk',
 			assets: [
-				{src: 'tutorful2.png', left: 41, top: 51, cls: 'reverse'},
-				{src: 'tutorful1.png', left: 10, top: 10, cls: ''}
+				{src: 'tutorful2.webp', left: 41, top: 51, cls: 'reverse'},
+				{src: 'tutorful1.webp', left: 10, top: 10, cls: ''}
 			]
 		},
 		{
@@ -313,7 +313,7 @@ let
 			sub: 'Interested in getting delicious wine delivered to your doorstep every month?',
 			url: 'https://www.winc.com',
 			assets: [
-				{src: 'winc.png', left: 50, top: 50, cls: ''}
+				{src: 'winc.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -322,9 +322,9 @@ let
 			category: 'Full stack development',
 			heading: 'Australian Private Jet Charter with Global Coverage',
 			sub: 'Avcair proudly raises the bar and exceeds the standard for luxury and corporate private jet charter services. We pride ourselves on offering a professional and personalised service which makes us one of Australia’s leading providers of VIP and corporate aviation',
-			url: 'http://www.avcair.com/wp-content/themes/avcair/img/footer-logo.png',
+			url: 'http://www.avcair.com/wp-content/themes/avcair/img/footer-logo.webp',
 			assets: [
-				{src: 'avcair.png', left: 50, top: 50, cls: ''}
+				{src: 'avcair.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -335,7 +335,7 @@ let
 			sub: 'Sale Ezy is the coming together of two complementary businesses, one dedicated to sales and one dedicated to marketing',
 			url: 'https://www.saleezy.com.au/',
 			assets: [
-				{src: 'saleezy.png', left: 50, top: 50, cls: ''}
+				{src: 'saleezy.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -346,7 +346,7 @@ let
 			sub: 'ProductReview.com.au is a community of consumers helping each other make better purchasing decisions.',
 			url: 'https://www.productreview.com.au',
 			assets: [
-				{src: 'productreview.png', left: 50, top: 50, cls: ''}
+				{src: 'productreview.webp', left: 50, top: 50, cls: ''}
 			]
 		}
 	],

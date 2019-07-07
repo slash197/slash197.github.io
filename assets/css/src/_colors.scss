@@ -40,22 +40,74 @@ $blue: #0a8fff;
 .auber { background: linear-gradient(to right, #aa076b, #61045f); }
 
 .wave {
-	background-image: url("../image/bg-shapes/wave.png");
+	background-image: url("../image/bg-shapes/wave.webp");
 	background-position: 0px 0px;
 }
 .dots {
-	background-image: url("../image/bg-shapes/dots.png");
+	background-image: url("../image/bg-shapes/dots.webp");
 	background-position: 0px 0px;
 }
 .triangles {
-	background-image: url("../image/bg-shapes/triangles.png");
+	background-image: url("../image/bg-shapes/triangles.webp");
 	background-position: 0px 0px;
 }
 .triangle2 {
-	background-image: url("../image/bg-shapes/triangle2.png");
+	background-image: url("../image/bg-shapes/triangle2.webp");
 	background-position: 0px 0px;
 }
 .hexa {
-	background-image: url("../image/bg-shapes/hexa.png");
+	background-image: url("../image/bg-shapes/hexa.webp");
 	background-position: 0px 0px;
 }
+
+.toastr {
+	position: fixed;
+	left: 50%;
+	top: 10%;
+	height: 40px;
+	margin: -30px 0px 0px -125px;
+	background-color: #62a8ea;
+	border-radius: 2px;
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+	transition: bottom 0.3s ease-in-out;
+	opacity: 0;
+	color: #ffffff;
+	z-index: 1050;
+
+	.ico {
+		display: inline-block;
+		font-size: 20px;
+		line-height: 40px;
+		margin: 0px 20px;
+		vertical-align: middle;
+		
+	}
+	.ico-check {
+		&:before {
+			content: '\2713';
+		}
+	}
+	.ico-close {
+		&:before {
+			content: '\2715';
+		}
+	}
+	div {
+		display: inline-block;
+		min-width: 250px;
+		max-width: 400px;
+		line-height: 20px;
+		padding: 0px 20px 0px 0px;
+		vertical-align: middle;
+	}
+}
+
+.toastr[data-index="1"] { bottom: 20px;  }
+.toastr[data-index="2"] { bottom: 90px;  }
+.toastr[data-index="3"] { bottom: 160px; }
+.toastr[data-index="4"] { bottom: 230px; }
+.toastr[data-index="5"] { bottom: 300px; }
+.toastr[data-index="6"] { bottom: 370px; }
+.toastr[data-index="7"] { bottom: 440px; }
+.toastr[data-index="8"] { bottom: 510px; }
+.toastr[data-index="9"] { bottom: 580px; }

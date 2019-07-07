@@ -97,9 +97,6 @@ let
 
 				if (padding > 0) $(this).css({'padding-top': padding});
 			});
-
-			$('.item .assets img').each(function(){
-			});
 		};
 		
 		this.resizeWindow = function(){

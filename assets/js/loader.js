@@ -64,16 +64,14 @@ loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', 
 loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js', null, true);
 
 loadScript('assets/js/jquery.min.js', function(){
-	loadScript('assets/js/bootstrap.min.js', function(){
-		loadScript('assets/js/fullpage.js', function(){
-			if (url.pathname.indexOf('portfolio') > -1)
-			{
-				loadScript('assets/js/portfolio.js', null, false, true);
-			}
-			else
-			{
-				loadScript('assets/js/home.js', null, false, true);
-			}
-		}, true);
+	loadScript('assets/js/fullpage.js', function(){
+		if (url.pathname.indexOf('portfolio') > -1)
+		{
+			loadScript('assets/js/portfolio.js', null, false, true);
+		}
+		else
+		{
+			loadScript('assets/js/home.js', null, false, true);
+		}
 	}, true);
 }, true);
