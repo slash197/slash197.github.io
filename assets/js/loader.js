@@ -40,10 +40,10 @@ function loadScript(source, callback, cached, module){
 	document.body.appendChild(script);
 };
 
-function loadStyle(source, callback){
+function loadStyle(source, callback, cached){
 	let style = document.createElement('link');
 
-	style.href = !debug ? source : source + '?v=' + ts;
+	style.href = cached ? source : source + '?v=' + ts;
 	style.rel = 'stylesheet';
 	style.type = 'text/css';
 	style.onerror = function(){
@@ -71,6 +71,7 @@ loadScript('assets/js/jquery.min.js', function(){
 		}
 		else
 		{
+			loadStyle('https://fonts.googleapis.com/icon?family=Material+Icons', null, true);
 			loadScript('assets/js/home.js', null, false, true);
 		}
 	}, true);

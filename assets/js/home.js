@@ -20,10 +20,28 @@ $.extend($.expr[':'],{
 let
 	App = function(){		
 		this.init = function(){
-			$('.hero h1').css('opacity', 1);
 			window.setTimeout(function(){
-				$('.hero p').css('opacity', 1);
-			}, 100);
+				$('.hero h1').css('opacity', 1);
+
+				window.setTimeout(function(){
+					$('.hero h2').css('opacity', 1);
+
+					window.setTimeout(function(){
+						$('.hero p').css('opacity', 1);
+					}, 1000);
+				}, 500);
+			}, 500);
+			
+			$('.feedback').prepend(
+				'<svg viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet">' +
+					'<defs>' +
+						'<clipPath id="path">' +
+							'<path d="M0,20 C100,80 350,0 500,30 L500,00 L0,0 Z" style="stroke: none; fill: red" />' +
+						'</clipPath>' +
+					'</defs>' +
+					'<rect width="100%" height="100" fill="#ffffff" clip-path="url(#path)" />' +
+				'</svg>'
+			);
 		};
 		
 		this.init();
