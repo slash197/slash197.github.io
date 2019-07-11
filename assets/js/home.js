@@ -1,12 +1,12 @@
 $.extend($.expr[':'],{
     inViewport: function(a){
-		let 
+		let
 			bounds = $(a).offset(),
 			viewport = {
 				top : $('body').scrollTop(),
 				left : $('body').scrollLeft()
 			};
-		
+
 		viewport.right = viewport.left + window.innerWidth;
 		viewport.bottom = viewport.top + window.innerHeight;
 
@@ -18,8 +18,17 @@ $.extend($.expr[':'],{
 });
 
 let
-	App = function(){		
+	App = function(){
 		this.init = function(){
+			VANTA.WAVES({
+				el: '.hero',
+				color: '#1f384b',
+				waveHeight: 20,
+				shininess: 10,
+				waveSpeed: 0.5,
+				zoom: 0.75
+		  	});
+
 			window.setTimeout(function(){
 				$('.hero h1').css('opacity', 1);
 
@@ -31,7 +40,7 @@ let
 					}, 1000);
 				}, 500);
 			}, 500);
-			
+
 			$('.feedback').prepend(
 				'<svg viewBox="0 0 500 50" preserveAspectRatio="xMinYMin meet">' +
 					'<defs>' +
@@ -43,11 +52,11 @@ let
 				'</svg>'
 			);
 		};
-		
+
 		this.init();
 	},
 	SWD = new App();
-	
+
 $(document).on('click', '.btn-send', function(){
 	if (!$('input[name="name"]').val())
 	{
@@ -64,7 +73,7 @@ $(document).on('click', '.btn-send', function(){
 		toastr(1, 'Please fill in your email address');
 		return false;
 	}
-	
+
 	$.ajax({
 		url: 'send.php',
 		type: 'post',
@@ -75,29 +84,29 @@ $(document).on('click', '.btn-send', function(){
 		},
 		success: function(r){
 			lg(r);
-			
+
 			$('input[name="name"]').val('');
 			$('input[name="project"]').val('');
 			$('input[name="email"]').val('');
-			
+
 			toastr(0, 'Thank you, we will get back to you as soon as possible');
 		}
 	});
 });
-	
+
 $(document).on('click', '[href="my-project"]', function(e){
 	e.preventDefault();
-	
+
 	TweenLite.to(window, 1, {scrollTo: {y: $('.request').offset().top}});
 });
-	
+
 $(document).on('click', '[href="feedback"]', function(e){
 	e.preventDefault();
-	
+
 	TweenLite.to(window, 1, {scrollTo: {y: $('.feedback').offset().top}});
 });
-	
-$(document).on('mousemove', 'body', function(e){		
+
+$(document).on('mousemove', 'body', function(e){
 	$('.hasTransition:inViewport').parallax(30, e);
 });
 
@@ -105,7 +114,7 @@ $.fn.parallax = function(resistance, mouse){
 	let
 		factor = -1,
 		bg = $('.hero .overlay');
-	
+
 	TweenLite.to(bg[0], 0.2, {
 		'background-position': ((mouse.clientX - window.innerWidth / 2) / (resistance * 3)) * factor + 'px ' + ((mouse.clientY - window.innerHeight / 2) / (resistance * 3)) * factor + 'px'
 	});
@@ -114,14 +123,14 @@ $.fn.parallax = function(resistance, mouse){
 function toastr(cls, text)
 {
 	var ico = '', index = $('.toastr').length + 1;
-	
+
 	switch (cls)
 	{
 		case 0: ico = 'ico-check'; break;
 		case 1: ico = 'ico-close'; break;
 		case 2: ico = 'ico-info-outline'; break;
 	}
-	
+
 	$('body').append('<div class="toastr" data-index="' + index + '" data-type="' + cls + '"><span class="ico ' + ico + '"></span><div>' + text + '</div></div>');
 	toastrHandler($('.toastr[data-index="' + index + '"]'));
 }
@@ -146,5 +155,5 @@ function toastrHandler(obj)
 				);
 			}, 3000);
 		}
-	);	
+	);
 }

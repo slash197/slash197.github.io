@@ -2,7 +2,7 @@
  * © 2019 SlashWebDesign
  */
 
-let 
+let
 	ts = new Date().getTime(),
 	url = new URL(window.location.href),
 	debug = true;
@@ -34,7 +34,7 @@ function loadScript(source, callback, cached, module){
 	script.onerror = function(){
 		lg('loading > error loading file [' + source + ']', 'error');
 	};
-	
+
 	if (typeof callback === 'function') script.onload = callback;
 
 	document.body.appendChild(script);
@@ -60,6 +60,14 @@ window.onerror = function(msg, source, line, col, error){
 	if (error) lg(error, 'error');
 };
 
+loadScript('https://www.googletagmanager.com/gtag/js?id=UA-74596211-1', function(){
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-74596211-1');
+});
+
 loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', null, true);
 loadScript('https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/ScrollToPlugin.min.js', null, true);
 
@@ -72,7 +80,11 @@ loadScript('assets/js/jquery.min.js', function(){
 		else
 		{
 			loadStyle('https://fonts.googleapis.com/icon?family=Material+Icons', null, true);
-			loadScript('assets/js/home.js', null, false, true);
+			loadScript('assets/js/three.min.js', function(){
+				loadScript('assets/js/vanta.waves.min.js', function(){
+					loadScript('assets/js/home.js', null, false, true);
+				});
+			});
 		}
 	}, true);
 }, true);
