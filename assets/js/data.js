@@ -82,6 +82,7 @@ let
 		},
 		{
 			name: 'Planning Pod',
+			featured: 1,
 			bg: 'grandeur',
 			category: 'Full stack development',
 			heading: 'The ultimate online hub for managing your events',
@@ -133,6 +134,7 @@ let
 		},
 		{
 			name: 'Kirawawa',
+			featured: 2,
 			bg: 'decent',
 			category: 'Full stack development',
 			heading: 'Give low income mothers a fresh start',
@@ -145,6 +147,7 @@ let
 		},
 		{
 			name: 'Ask For Task',
+			featured: 1,
 			bg: 'shifter',
 			category: 'Full stack development',
 			heading: 'Get stuff done',
@@ -202,6 +205,7 @@ let
 		},
 		{
 			name: 'Carriage',
+			featured: 1,
 			bg: 'quepal',
 			category: 'Full stack development',
 			heading: 'Your favourite food, delivered by us',
@@ -226,6 +230,7 @@ let
 		},
 		{
 			name: 'Azimo',
+			featured: 3,
 			bg: 'socialive',
 			category: 'Full stack development',
 			heading: 'Faster, safer money transfers',
@@ -307,6 +312,7 @@ let
 		},
 		{
 			name: 'Winc',
+			featured: 1,
 			bg: 'flickr',
 			category: 'Full stack development',
 			heading: 'Unbox Better Wine',

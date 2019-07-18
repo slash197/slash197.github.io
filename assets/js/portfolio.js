@@ -1,12 +1,14 @@
+import Data from './data.js';
+
 $.extend($.expr[':'],{
     inViewport: function(a){
-		let 
+		let
 			bounds = $(a).offset(),
 			viewport = {
 				top : $('body').scrollTop(),
 				left : $('body').scrollLeft()
 			};
-		
+
 		viewport.right = viewport.left + window.innerWidth;
 		viewport.bottom = viewport.top + window.innerHeight;
 
@@ -16,31 +18,6 @@ $.extend($.expr[':'],{
 		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
 	}
 });
-
-String.prototype.safe = function(){
-	return this.replaceAll(' ', '-').stripDashes();
-};
-
-String.prototype.replaceAll = function(find, replace){
-	function escapeRegExp(str)
-	{
-		return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
-	}
-	
-	return this.replace(new RegExp(escapeRegExp(find), 'g'), replace);
-};
-
-String.prototype.stripDashes = function(){
-	var str = this;
-	
-	str = str.replaceAll('-----', '-');
-	str = str.replaceAll('----', '-');
-	str = str.replaceAll('---', '-');
-	
-	return str.replaceAll('--', '-');
-};
-
-import Data from './data.js';
 
 let
 	pointer = {
@@ -54,16 +31,16 @@ let
 		},
 		c: 0.015
 	},
-	App = function(){		
+	App = function(){
 		this.loadAssets = function(parent){
 			let assets = parent.querySelectorAll('img');
-			
+
 			for (let i = 0; i < assets.length; i++)
 			{
 				if ((window.innerWidth < 1099) && (i > 0)) break;
-					
+
 				let img = assets[i];
-				
+
 				img.src = img.getAttribute('data-url');
 				img.onload = function(){
 					let
@@ -87,7 +64,7 @@ let
 				};
 			}
 		};
-		
+
 		this.centerProjectItems = function(){
 			$('.item .info').each(function(){
 				let
@@ -98,11 +75,11 @@ let
 				if (padding > 0) $(this).css({'padding-top': padding});
 			});
 		};
-		
+
 		this.resizeWindow = function(){
 			this.centerProjectItems();
 		};
-		
+
 		this.init = function(){
 			let
 				i = 0,
@@ -114,24 +91,24 @@ let
 				a = null,
 				assets = '',
 				html = '';
-			
+
 			for (i = 0; i < Data.Projects.length; i++)
 			{
 				p = Data.Projects[i];
 				assets = '';
-				
+
 				if (!p.name) continue;
-				
+
 				for (j = 0; j < p.assets.length; j++)
 				{
 					a = p.assets[j];
-					
+
 					left = a.left ? a.left : 50;
 					top = a.top ? a.top : 50;
-					
+
 					assets += '<img class="hasTransition ' + a.cls + '" data-url="assets/image/projects/' + a.src + '" alt="' + p.name + '" data-left="' + left + '%" data-top="' + top + '%" />';
 				}
-				
+
 				html +=
 					'<div class="section" data-anchor="' + p.name.safe() + '">' +
 						'<div class="item ' + p.bg + '">' +
@@ -147,14 +124,14 @@ let
 						'</div>' +
 					'</div>'
 				;
-				
+
 				bgIndex++;
-				
+
 				$('.menu ul').append('<li data-menuanchor="' + p.name.safe() + '"><a href="#' + p.name.safe() + '">/' + p.name + '</a></li>');
-				
+
 				if (bgIndex === Data.Background.length) bgIndex = 0;
 			}
-			
+
 			$('.app')
 				.append(html)
 				.fullpage({
@@ -172,11 +149,11 @@ let
 					}.bind(this)
 				});
 		};
-		
+
 		this.init();
 	},
 	SWD = new App();
-			
+
 $(document).on('mousemove', 'body', function(e){
 	if (window.innerWidth > 1099) $('.hasTransition:inViewport').parallax(30, e);
 });
@@ -199,10 +176,10 @@ $.fn.parallax = function(resistance, mouse){
 			y: ((mouse.clientY - window.innerHeight / 2) / resistance) * factor
 		});
 	}
-	
+
 	// background
 	factor *= -1;
-	
+
 	TweenLite.to(bg[0], 0.2, {
 		'background-position': ((mouse.clientX - window.innerWidth / 2) / (resistance * 3)) * factor + 'px 0px'
 	});

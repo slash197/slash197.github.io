@@ -80,7 +80,30 @@ loadScript('assets/js/jquery.min.js', function(){
 		else
 		{
 			loadStyle('https://fonts.googleapis.com/icon?family=Material+Icons', null, true);
-			loadScript('assets/js/home.js');
+			loadScript('assets/js/home.js', null, false, true);
 		}
 	}, true);
 }, true);
+
+String.prototype.safe = function(){
+	return this.replaceAll(' ', '-').stripDashes();
+};
+
+String.prototype.replaceAll = function(find, replace){
+	function escapeRegExp(str)
+	{
+		return str.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+	}
+
+	return this.replace(new RegExp(escapeRegExp(find), 'g'), replace);
+};
+
+String.prototype.stripDashes = function(){
+	var str = this;
+
+	str = str.replaceAll('-----', '-');
+	str = str.replaceAll('----', '-');
+	str = str.replaceAll('---', '-');
+
+	return str.replaceAll('--', '-');
+};

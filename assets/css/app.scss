@@ -69,21 +69,6 @@ html {
 				    transform: translate(-50%,-50%) rotateZ(495deg);
 				}
 			}
-			.overlay {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				width: 100%;
-				height: 100%;
-				background-size: cover;
-				z-index: 0;
-			}
-			.light {
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				z-index: 1;
-			}
 			div {
 				position: absolute;
 				bottom: 140px;
@@ -129,7 +114,34 @@ html {
 				}
 			}
 		}
+		.featured {
+			.item {
+				display: inline-block;
+				vertical-align: top;
+				width: 33.3333%;
+				height: 300px;
+				text-align: center;
+				cursor: pointer;
+				transition: filter .2s ease-in-out;
+				filter: grayscale(1);
+				overflow: hidden;
 
+				&:hover {
+					filter: grayscale(0);
+				}
+
+				.helper {
+				    display: inline-block;
+				    height: 100%;
+				    vertical-align: middle;
+				}
+				img {
+					max-height: 66%;
+					display: inline-block;
+					vertical-align: middle;
+				}
+			}
+		}
 		.intro {
 			background-color: $silver;
 			padding: 80px 80px;
@@ -532,6 +544,11 @@ html {
 					width: calc(100% - 15px);
 				}
 			}
+			.featured {
+				.item {
+					width: 50%;
+				}
+			}
 		}
 	}
 }
@@ -549,6 +566,11 @@ html {
 			}
 			.feedback {
 				padding-left: 80px;
+			}
+			.featured {
+				.item {
+					width: 100%;
+				}
 			}
 		}
 	}

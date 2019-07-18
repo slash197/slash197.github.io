@@ -1,6 +1,26 @@
+import Data from './data.js';
+
 let
 	App = function(){
 		this.init = function(){
+			let
+				i = 0,
+				p = null;
+
+			for (i = 0; i < Data.Projects.length; i++)
+			{
+				p = Data.Projects[i];
+
+				if (!p.name || !p.featured) continue;
+
+				$('.featured').append(
+					'<div class="item ' + p.bg + '" data-url="' + p.name.safe() + '">' +
+						'<span class="helper"></span>' +
+						 '<img src="assets/image/projects/' + p.assets[p.featured - 1].src + '" alt="' + p.name + '" />' +
+					'</div>'
+				);
+			}
+
 			window.setTimeout(function(){
 				$('.hero h1').css('opacity', 1);
 
@@ -30,6 +50,11 @@ let
 		this.init();
 	},
 	SWD = new App();
+
+$(document).on('click', '.featured .item', function(){
+	url = $(this).data('url');
+	window.location.href = 'portfolio#' + url;
+});
 
 $(document).on('click', '.btn-send', function(){
 	if (!$('input[name="name"]').val())
