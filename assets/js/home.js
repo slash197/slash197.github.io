@@ -1,34 +1,6 @@
-$.extend($.expr[':'],{
-    inViewport: function(a){
-		let
-			bounds = $(a).offset(),
-			viewport = {
-				top : $('body').scrollTop(),
-				left : $('body').scrollLeft()
-			};
-
-		viewport.right = viewport.left + window.innerWidth;
-		viewport.bottom = viewport.top + window.innerHeight;
-
-		bounds.right = bounds.left + $(a).outerWidth();
-		bounds.bottom = bounds.top + $(a).outerHeight();
-
-		return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-	}
-});
-
 let
 	App = function(){
 		this.init = function(){
-			VANTA.WAVES({
-				el: '.hero',
-				color: '#1f384b',
-				waveHeight: 20,
-				shininess: 10,
-				waveSpeed: 0.5,
-				zoom: 0.75
-		  	});
-
 			window.setTimeout(function(){
 				$('.hero h1').css('opacity', 1);
 
@@ -51,6 +23,8 @@ let
 					'<rect width="100%" height="100" fill="#ffffff" clip-path="url(#path)" />' +
 				'</svg>'
 			);
+
+			$('.clock').css('opacity', 1);
 		};
 
 		this.init();
@@ -105,20 +79,6 @@ $(document).on('click', '[href="feedback"]', function(e){
 
 	TweenLite.to(window, 1, {scrollTo: {y: $('.feedback').offset().top}});
 });
-
-$(document).on('mousemove', 'body', function(e){
-	$('.hasTransition:inViewport').parallax(30, e);
-});
-
-$.fn.parallax = function(resistance, mouse){
-	let
-		factor = -1,
-		bg = $('.hero .overlay');
-
-	TweenLite.to(bg[0], 0.2, {
-		'background-position': ((mouse.clientX - window.innerWidth / 2) / (resistance * 3)) * factor + 'px ' + ((mouse.clientY - window.innerHeight / 2) / (resistance * 3)) * factor + 'px'
-	});
-};
 
 function toastr(cls, text)
 {

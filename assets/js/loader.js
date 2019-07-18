@@ -5,7 +5,7 @@
 let
 	ts = new Date().getTime(),
 	url = new URL(window.location.href),
-	debug = true;
+	debug = false;
 
 function lg(o, level){
 	if (!level) level = 'info';
@@ -80,11 +80,7 @@ loadScript('assets/js/jquery.min.js', function(){
 		else
 		{
 			loadStyle('https://fonts.googleapis.com/icon?family=Material+Icons', null, true);
-			loadScript('assets/js/three.min.js', function(){
-				loadScript('assets/js/vanta.waves.min.js', function(){
-					loadScript('assets/js/home.js', null, false, true);
-				});
-			});
+			loadScript('assets/js/home.js');
 		}
 	}, true);
 }, true);

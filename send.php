@@ -1,8 +1,8 @@
 <?php
 
-$headers = 
-	'From: '.$email_from."\r\n".
-	'Reply-To: '.$email_from."\r\n" .
+$headers =
+	'From: '. $_POST['email']."\r\n".
+	'Reply-To: '.$_POST['email']."\r\n" .
 	'X-Mailer: PHP/' . phpversion();
 ;
 

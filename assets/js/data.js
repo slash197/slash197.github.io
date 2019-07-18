@@ -1,4 +1,4 @@
-let 
+let
 	Projects = [
 		{
 			name: 'Sports Tracker',
@@ -208,7 +208,7 @@ let
 			sub: 'Take your pick from our featured Restaurants in Kuwait. Delivered faster to your door..',
 			url: 'https://www.trycarriage.com',
 			assets: [
-				{src: 'trycarriage', left: 50, top: 50, cls: ''}
+				{src: 'trycarriage.webp', left: 50, top: 50, cls: ''}
 			]
 		},
 		{
@@ -322,7 +322,7 @@ let
 			category: 'Full stack development',
 			heading: 'Australian Private Jet Charter with Global Coverage',
 			sub: 'Avcair proudly raises the bar and exceeds the standard for luxury and corporate private jet charter services. We pride ourselves on offering a professional and personalised service which makes us one of Australia’s leading providers of VIP and corporate aviation',
-			url: 'http://www.avcair.com/wp-content/themes/avcair/img/footer-logo.webp',
+			url: 'http://www.avcair.com',
 			assets: [
 				{src: 'avcair.webp', left: 50, top: 50, cls: ''}
 			]
