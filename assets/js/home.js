@@ -44,7 +44,7 @@ let
 				'</svg>'
 			);
 
-			$('.clock').css('opacity', 1);
+			$('.clock').css('opacity', 0.2);
 		};
 
 		this.init();

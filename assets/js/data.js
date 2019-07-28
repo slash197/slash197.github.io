@@ -354,6 +354,172 @@ let
 			assets: [
 				{src: 'productreview.webp', left: 50, top: 50, cls: ''}
 			]
+		},
+		{
+			name: 'Simple Invoices',
+			bg: 'purple',
+			category: 'Full stack development',
+			heading: 'Simple invoicing for your business',
+			sub: 'Invoicing your clients shouldn\'t be difficult. Simple, professional invoices for Australian small businesses',
+			url: 'https://simpleinvoices.com.au',
+			assets: [
+				{src: 'simpleinvoices.png', left: 50, top: 20, cls: ''},
+				{src: 'simpleinvoices2.png', left: 50, top: 40, cls: 'reverse'}
+			]
+		},
+		{
+			name: 'Crossrope',
+			bg: 'wiretap',
+			category: 'Full stack development',
+			heading: 'The fun jump workout to get you fit for summer',
+			sub: 'Meticulous engineering and hours of testing resulted in the most effective jump rope system on the planet',
+			url: 'https://www.crossrope.com',
+			assets: [
+				{src: 'crossrope.png', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: 'TRUE Linkswear',
+			bg: 'quepal',
+			category: 'Full stack development',
+			heading: 'Materials Matter',
+			sub: 'True crafts naturally comfortable gear that transcends the links. Using only the finest materials, our shoes protect you from the elements and help you #EnjoyTheWalk',
+			url: 'https://truelinkswear.com',
+			assets: [
+				{src: 'truelinkswear.png', left: 100, top: 50, cls: ''}
+			]
+		},
+		{
+			name: 'PhysiqApparel',
+			bg: 'selenium',
+			category: 'Full stack development',
+			heading: 'Be the future',
+			sub: 'Seamless sportswear like no other. Featuring StaticForm® Technology.',
+			url: 'https://www.physiqapparel.com',
+			assets: [
+				{src: 'physiqapparel.png', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: 'Rakuten',
+			bg: 'expresso',
+			category: 'Full stack development',
+			heading: 'No points. No fees. No forms.',
+			sub: 'Stores pay Rakuten a commission for sending you their way, and Rakuten shares the commission with you as Cash Back.',
+			url: 'https://www.rakuten.com',
+			assets: [
+				{src: 'rakuten.png', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: 'Wohn liegenschaften',
+			bg: 'grade-grey',
+			category: 'Full stack development',
+			heading: 'Wohn liegenschaften',
+			sub: 'Möchten Sie eine Immobilie verkaufen? Dann sind Sie hier richtig: Wir analysieren, bewerten und vermarkten Liegenschaften bis zum erfolgreichen Abschluss.',
+			url: 'https://www.wohnliegenschaften.ch/',
+			assets: [
+				{src: 'wohn.png', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: 'Wild Dots',
+			bg: 'royal-blue',
+			category: 'Full stack development',
+			heading: 'Immersive ideas, powerful results',
+			sub: 'Driving efficiency and innovation in real estate',
+			url: 'https://wild-dots.com',
+			assets: [
+				{src: 'wilddots.png', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: 'grandeur',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: 'behongo',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: '',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: '',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: '',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: '',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: '',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
+		},
+		{
+			name: '',
+			bg: '',
+			category: 'Full stack development',
+			heading: '',
+			sub: '',
+			url: '',
+			assets: [
+				{src: '', left: 50, top: 50, cls: ''}
+			]
 		}
 	],
 	Background = ['dots','hexa','triangle2','triangles','wave'];
